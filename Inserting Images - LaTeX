@@ -1,0 +1,15 @@
+https://www.sharelatex.com/learn/Inserting_Images
+
+Work-in-progess Sample: (doesn't yet work)
+
+  \documentclass{article}
+  \usepackage{graphicx}
+  \graphicspath{ {screenshots_repo/} }
+
+  \begin{document}
+  This is an example document \footnote{r datalogging}
+
+  \includegraphics{screenshot}
+
+  There's a picture of a galaxy above
+  \end{document}Screensh

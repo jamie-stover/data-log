@@ -1,21 +1,29 @@
-%https://www.sharelatex.com/learn/Inserting_Images
 
+
+%https://www.sharelatex.com/learn/Inserting_Images
+%Get rid of margins and pagenumbers
 %Work-in-progess Sample: (doesn't yet work)
 
   \documentclass{article}
   \usepackage{graphicx}
+  \usepackage{multicol}
+  \usepackage[margin=0.5in]{geometry}
   \graphicspath{ {screenshots/} } %screenshots is the relative directory for pictures
   \usepackage{pdflscape}
+  \pagenumbering{gobble}
   
   \begin{document}
   \begin{landscape}
-  This is an example document \footnote{r datalogging} Need footnotes?
-
-  \includegraphics{1} %1 is the name of the picture file
-  \includegraphics[width=3.0cm, height=2.0cm]{1} %No reason for these dimensions. 
-                                                 % Just gonna need to specify size eventually.
+  \begin{multicols}{3}
   
-  There's a picture of a galaxy above
+  \includegraphics[width=9.5cm, height=9.5cm]{1} %1 is the name of the picture fill
+  \includegraphics[width=9.5cm, height=9.5cm]{1} %No reason for these dimensions. 
   
+ \includegraphics[width=9.5cm, height=9.5cm]{1}
+ \includegraphics[width=9.5cm, height=9.5cm]{1}  % Just gonna need to specify size eventually.
+  
+  \includegraphics[width=9.5cm, height=19cm]{1} 
+  
+  \end{multicols}
   \end{landscape}
   \end{document}

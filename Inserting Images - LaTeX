@@ -1,15 +1,21 @@
-https://www.sharelatex.com/learn/Inserting_Images
+%https://www.sharelatex.com/learn/Inserting_Images
 
-Work-in-progess Sample: (doesn't yet work)
+%Work-in-progess Sample: (doesn't yet work)
 
   \documentclass{article}
   \usepackage{graphicx}
-  \graphicspath{ {screenshots_repo/} }
-
+  \graphicspath{ {screenshots/} } %screenshots is the relative directory for pictures
+  \usepackage{pdflscape}
+  
   \begin{document}
-  This is an example document \footnote{r datalogging}
+  \begin{landscape}
+  This is an example document \footnote{r datalogging} Need footnotes?
 
-  \includegraphics{screenshot}
-
+  \includegraphics{1} %1 is the name of the picture file
+  \includegraphics[width=3.0cm, height=2.0cm]{1} %No reason for these dimensions. 
+                                                 % Just gonna need to specify size eventually.
+  
   There's a picture of a galaxy above
-  \end{document}Screensh
+  
+  \end{landscape}
+  \end{document}

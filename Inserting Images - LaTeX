@@ -1,8 +1,11 @@
 
-
-%https://www.sharelatex.com/learn/Inserting_Images
-%Get rid of margins and pagenumbers
+%Need to :
+	% Add white border to images
+	% Fix fop of column offset.
+	% Figure out how to add legend
 %Work-in-progess Sample: (doesn't yet work)
+% Needs image /screenshots/1.xxx
+
 
   \documentclass{article}
   \usepackage{graphicx}
@@ -16,13 +19,13 @@
   \begin{landscape}
   \begin{multicols}{3}
   
-  \includegraphics[width=9.5cm, height=9.5cm]{1} %1 is the name of the picture fill
-  \includegraphics[width=9.5cm, height=9.5cm]{1} %No reason for these dimensions. 
+ \includegraphics[width=9.5cm, height=9.5cm]{1} %1 is the name of the picture fill
+ \includegraphics[width=9.5cm, height=9.5cm]{1} %No reason for these dimensions. 
   
  \includegraphics[width=9.5cm, height=9.5cm]{1}
  \includegraphics[width=9.5cm, height=9.5cm]{1}  % Just gonna need to specify size eventually.
   
-  \includegraphics[width=9.5cm, height=19cm]{1} 
+  \includegraphics[width=9.5cm, height=20cm]{1} 
   
   \end{multicols}
   \end{landscape}

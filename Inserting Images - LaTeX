@@ -1,6 +1,6 @@
 
 %Need to :
-	% Add white border to images
+	
 	% Fix fop of column offset.
 	% Figure out how to add legend DONE
 %Work-in-progess Sample: (doesn't yet work)
@@ -18,19 +18,19 @@
   \begin{landscape}
   \begin{multicols}{3}
   
-\includegraphics[width=9cm, height=8.9cm]{5} % 1 is the name of the picture fill
+\includegraphics[width=9cm, height=8.9cm]{5FittedRate} 
 \newline
 \newline
-\includegraphics[width=9cm, height=8.9cm]{3} % No reason for these dimensions. 
+\includegraphics[width=9cm, height=8.9cm]{s3} % Dimensions are chosen to position images correctly 
 \newline
-\includegraphics[height=1cm]{6} 
+\includegraphics[height=1cm]{legend} 
   
-\includegraphics[width=9cm, height=9.5cm]{4}
+\includegraphics[width=9cm, height=9.5cm]{qTest}
 \newline
 \newline
-\includegraphics[width=9cm, height=9.5cm]{2}  % Just gonna need to specify size eventually.
+\includegraphics[width=9cm, height=9.5cm]{qCriteria}  % Just gonna need to specify size eventually.
   
- \includegraphics[width=8.5cm, height=20cm]{1} 
+ \includegraphics[width=8.5cm, height=20cm]{6Panel} 
   
   \end{multicols}
   \end{landscape}

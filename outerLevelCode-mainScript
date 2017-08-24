@@ -1,0 +1,35 @@
+""""
+Feed pictures into Lasix PDF generator and delete source picture. Move and rename outputted PDF.
+Run from command line.
+"""
+
+#  Rename images -- DONE (Files lose extension specifier. Not sure whether that's a problem for Latex.)
+#  Run summaryGen
+#  Delete images
+#  Move and rename summary PDF
+
+"""
+Psuedo-code:
+    sorted files in directory = listOfFileNames
+    i = 0
+    while i < len(listOfFileNames)
+        os.rename(listOfFileNames[i], str(i))
+
+"""
+
+import os
+
+
+def rename(dir="testing/"):
+    """ 
+    Rename all files in a directory to a series of integers starting at 0 arranged alphabetically. Argument dir 
+    specifies relative location of folder.
+    
+    """
+    filesNames = os.listdir("testing")
+    i = 0
+    while i < len(filesNames):
+        os.rename(dir + filesNames[i], dir + str(i))  # Does this output need to be png?®
+        i += 1
+
+rename()

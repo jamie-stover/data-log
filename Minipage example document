@@ -1,0 +1,71 @@
+%Minipage example document
+
+%need to:
+% - figure out how to separate each onto own page
+% - figure out how to apply to our document
+
+%Example Minipage
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[margin=0cm]{geometry}
+\graphicspath{ {} } %screenshots is the relative directory for pictures
+\usepackage{pdflscape}
+\pagenumbering{gobble}
+
+
+\begin{document}
+
+
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=\textwidth]{screenshot}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=\textwidth]{screenshot}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=\textwidth]{screenshot}
+\end{minipage}
+
+
+%With minipage also text can be put next to an image, this also can be implemented by the usepackage sidecap.
+
+
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\textwidth]{screenshot}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+on pic 1 you find the word pic 1\\
+on pic 1 you find the word pic 1\\
+on pic 1 you find the word pic 1\\
+on pic 1 you find the word pic 1\\
+on pic 1 you find the word pic 1\ \vspace{2.5cm}\\
+\end{minipage}
+
+
+%Two tables next to each other:
+
+
+\begin{minipage}{0.2\textwidth}
+\begin{tabular}{|c|c|c|}
+\hline
+ A & B & C \\
+\hline
+ 1 & 2 & 3  \\
+\hline 
+ 4 & 5 & 6 \\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\begin{tabular}{c|c|c}
+ A & B & C \\
+\hline
+ 1 & 2 & 3  \\
+\hline 
+ 4 & 5 & 6 \\
+\end{tabular}
+\end{minipage}
+
+\end{document}

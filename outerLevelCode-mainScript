@@ -37,15 +37,16 @@ def delete(dir="testing/"):
     filesNames = os.listdir("testing")
     i = 0
     while i < len(filesNames):
-        os.unlink(dir + str(i))
+        os.unlink(dir + str(i)+ ".png")
         i += 1
-
+    os.unlink("SummaryGen.log")
+    os.unlink("SummaryGen.aux")
 
 def main():
     """ """
     rename()
     callLatex()
-    #delete()
+    delete()
 
 if __name__ == "__main__":
     main()

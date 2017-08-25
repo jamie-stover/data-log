@@ -11,7 +11,7 @@ Run from command line.
 
 
 import os
-
+import datetime
 
 def rename(dir="testing/"):
     """
@@ -27,26 +27,36 @@ def rename(dir="testing/"):
 
 
 def callLatex(latexFileLocation="/Users/harry/PycharmProjects/data-log/SummaryGen"):
-    """ """
+    """ Effectively run a latex file from command line. Argument is tex file location. """
     argument = "pdflatex " + str(latexFileLocation)
     os.system(argument)
 
 
 def delete(dir="testing/"):
-    """ """
+    """ Delete all file in the relative directory specified by argument. """
     filesNames = os.listdir("testing")
     i = 0
     while i < len(filesNames):
-        os.unlink(dir + str(i)+ ".png")
+        os.unlink(dir + str(i) + ".png")
         i += 1
-    os.unlink("SummaryGen.log")
-    os.unlink("SummaryGen.aux")
+
+    os.unlink("SummaryGen.log")  # These are the log files from the latex script
+    os.unlink("SummaryGen.aux")  # Assume tex file name is SummaryGen
+
+
+def move():
+    """ Move and Rename a file to a time stamp. """
+    timeStamp = datetime.datetime.now()
+    newName = "FinishedPDFs/" + str(timeStamp)
+    os.rename("SummaryGen.pdf", newName)
+
 
 def main():
     """ """
     rename()
     callLatex()
     delete()
+    move()
 
 if __name__ == "__main__":
     main()

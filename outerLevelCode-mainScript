@@ -6,7 +6,7 @@ Run from command line.
 #  Rename images -- DONE (Files lose extension specifier. Not sure whether that's a problem for Latex.)
 #  Run summaryGen -- DONE
 #  Delete images -- DONE # Better to move?
-#  Move and rename summary PDF
+#  Move and rename summary PDF -- DONE
 
 
 
